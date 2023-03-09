@@ -6,6 +6,7 @@
     >
   </div>
   <div class="header-subtitle">{{ .Site.Params.Description }}</div>
+  {{ if .Params.math }}{{ partial "mathjax_support.html" . }}{{ end }}
 </header>
 <div class="row end-md center-xs header-items">
   {{ range .Site.Params.socials }}
